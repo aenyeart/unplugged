@@ -87,6 +87,108 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* Base HEADER and FOOTER Styles */
+header, footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+header .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-flow: row wrap; seems unnecessary as nav only has one block item (ul) within it. */
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+.contact, .social, .copyright {
+  text-align: center;
+}
+/* Seems unnecessary. Text align takes care of <h4>
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+} */
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.copyright {
+  width: 100%; /* clears it from beneath content-wrapper*/
+}
+
+/* HOMEPAGE  */
+
+.hero-area {
+  display: flex;
+  justify-content: center;
+}
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* This was styled for desktop:
+  aside .content-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-flow: row wrap
+}
+ */
+
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.features-items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+.fontawesome-icon, .features-item-description {
+  margin: 0 auto;
+  /* try this. might need to make <article> into flex container instead */
+}
+.features-items article {
+  /* will need a width/maxwidth to constrain text */
+}
+.reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ABOUT PAGE */
+
+.mission, .map, .contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FAQ PAGE */
+
+.faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -260,4 +362,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
