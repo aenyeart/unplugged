@@ -90,7 +90,7 @@ textarea {
 /* Base HEADER and FOOTER Styles */
 .content-wrapper {
   width: 90%;
-  margin: 50px 0;
+  margin: 40px 0; /* solution says 50px, but all <h > and <p> default margins add ~16px, and reducing this is simpler for now. Stripping h and p of margins means having to add them back in. */
 }
 header, footer {
   display: flex;
