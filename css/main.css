@@ -98,6 +98,68 @@ NOTES
 Tags to revisit: PLACEHOLDER, DBLCHECK, solution,
  */
 
+ /* General Styles */
+
+ html {
+   font-size: 62.5%; /* Sets root font size to 10px */
+ }
+
+ body {
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1.6rem; /* 16px */
+ }
+
+ ul, ol {
+
+ }
+ nav {
+   font-size: 1.8rem;
+   font-weight: bold;
+   text-transform: uppercase;
+ }
+ a {
+   color: #e2e3ed;
+   text-decoration: none;
+ }
+
+ h1, h2, h3, h4 {
+   font-family: 'Poppins', sans-serif;
+ }
+ h1 {
+   font-size: 3.6rem;
+   font-weight: normal;
+ }
+ h2 {
+   font-size: 3rem;
+   font-weight: normal;
+ }
+ h3, h4 {
+   font-size: 1.8rem;
+   font-weight: normal;
+ }
+
+ p {
+   font-size: 1.3rem;
+   line-height: 1.8rem;
+   /* font-weight: normal; */
+ }
+
+ img {
+
+ }
+
+ figure {
+
+ }
+
+ address {
+   font-style: normal;
+ }
+
+ .content-wrapper {
+
+ }
+
  html {
    color: #e2e3ed; /* PLACEHOLDER */
  }
@@ -209,7 +271,7 @@ aside .content-wrapper {
 .features-items {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 .fontawesome-icon, .features-item-description {
   margin: 0 auto;
@@ -364,6 +426,9 @@ aside .content-wrapper {
   }
   .form-description, .form {
     width: 45%;
+  }
+  .features-item {
+    justify-content: space-between;
   }
   .features-items article {
     width: 50%;
