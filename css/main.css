@@ -95,7 +95,7 @@ features dk brown 282118
 review dk green 2a423a
 
 NOTES
-Tags to revisit: PLACEHOLDER, DBLCHECK, solution,
+Tags to revisit: PLACEHOLDER, REVISIT, DBLCHECK, solution,
  */
 
  /* General Styles */
@@ -254,6 +254,33 @@ aside {
 }
 aside .content-wrapper {
   margin-top: 30px;
+}
+/* FORM STYLING */
+aside .form {
+  margin-top: 30px;
+  /* REVISIT (gets reset to 0 for tablet and desktop) */
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 .form input{
   width: 90%;
@@ -433,6 +460,9 @@ aside .content-wrapper {
     display: flex;
     justify-content: space-between;
     margin: 30px 0;
+  }
+  aside .form {
+    margin-top: 0;
   }
   .form-description, .form {
     width: 45%;
