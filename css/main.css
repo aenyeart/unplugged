@@ -275,8 +275,8 @@ input[type=button] {
   margin-top: 20px;
   background-color: #2a423a;
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 1.125em;
+  font-weight: 400;
+  font-size: 1.8rem;
   color: #e2e3ed;
   border: none;
   text-align: center;
@@ -539,7 +539,7 @@ input[type=button] {
   }
   h3, h4 {
     font-size: 3rem;
-    line-height: normal;
+    line-height: 1.2;
   }
   p {
     font-size: 1.8rem;
@@ -553,6 +553,9 @@ input[type=button] {
   }
   .form-description, .form {
     width: 40%;
+  }
+  input[type=button] {
+    font-size: 2.4rem;
   }
   footer .content-wrapper {
     width: 70%;
