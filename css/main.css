@@ -102,6 +102,7 @@ Tags to revisit: PLACEHOLDER, DBLCHECK, solution,
 
  html {
    font-size: 62.5%; /* Sets root font size to 10px */
+   line-height: 1.2;
  }
 
  body {
@@ -124,22 +125,21 @@ Tags to revisit: PLACEHOLDER, DBLCHECK, solution,
 
  h1, h2, h3, h4 {
    font-family: 'Poppins', sans-serif;
+   margin: 0; /* DBLCHECK */
+   font-weight: normal;
  }
  h1 {
    font-size: 3.6rem;
-   font-weight: normal;
  }
  h2 {
    font-size: 3rem;
-   font-weight: normal;
  }
  h3, h4 {
    font-size: 1.8rem;
-   font-weight: normal;
  }
 
  p {
-   font-size: 1.3rem;
+   font-size: 1.4rem;
    line-height: 1.8rem;
    /* font-weight: normal; */
  }
@@ -278,7 +278,7 @@ aside .content-wrapper {
   /* try this. might need to make <article> into flex container instead */
 }
 .features-items article {
-  width: 65%;
+  width: 63%;
   text-align: center;
   margin: 25px 0;
 }
@@ -409,6 +409,16 @@ aside .content-wrapper {
     max-width: 640px;
     margin: 100px 0;
   }
+  h1 {
+    font-size: 4.8rem;
+  }
+  h2{
+    font-size: 3.6rem;
+  }
+  h3, h4 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
   header .content-wrapper {
     justify-content: space-between;
     height: 95px;
@@ -490,6 +500,20 @@ aside .content-wrapper {
   /* DESKTOP STYLES GO HERE */
   .content-wrapper {
     max-width: 960px;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+  h2{
+    font-size: 3.6rem;
+  }
+  h3, h4 {
+    font-size: 3rem;
+    line-height: normal;
+  }
+  p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
   }
   .hero-area h1 {
     width: 680px;
