@@ -145,11 +145,11 @@ Tags to revisit: PLACEHOLDER, REVISIT, DBLCHECK, solution,
  }
 
  img {
-
+   width: 100%;
  }
 
  figure {
-
+   margin: 0;
  }
 
  address {
@@ -175,10 +175,6 @@ header, footer {
   flex-flow: row wrap;
   background: #202322;
 }
-header a {
-  /* DBLCHECK causes asymmetry of logo */
-  padding: 15px 0 10px 0;
-}
 header .content-wrapper {
   display: flex;
   justify-content: center;
@@ -188,10 +184,23 @@ header .content-wrapper {
   height: 120px;
   margin: 0;
 }
+header figure {
+  width: 60%;
+  /* flex properties seem unnecessary as <img> is only child and takes up 100% width of <figure>
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* flex-flow: row wrap;
+  in SOLUTION but seems unnecessary as <figure> only has one item  */
+}
+header a {
+  /* DBLCHECK causes asymmetry of logo
+  padding: 15px 0 10px 0;*/
+}
 .header-divider {
   width: 100%;
   height: 1px;
-  background: #e2e3ed;
+  background: #3a3a3a;
 }
 header nav {
   display: flex;
@@ -244,7 +253,9 @@ footer .content-wrapper {
 .hero-area {
   display: flex;
   justify-content: center;
-  background: #5a4e3d; /* PLACEHOLDER */
+  background: url('../img/hero.jpg') center no-repeat #5a4e3d;
+  background-size: cover;
+  min-height: 500px;
 }
 aside {
   display: flex;
@@ -290,7 +301,8 @@ input[type=button] {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #282118; /* PLACEHOLDER */
+  background: url('../img/campsite.jpg') center no-repeat #282118;
+  background-size: cover;;
 }
 .features .content-wrapper {
   margin-bottom: 25px;
@@ -425,9 +437,7 @@ input[type=button] {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
+   MEDIA QUERIES
    ========================================================================== */
 
 @media only screen and (min-width: 768px) {
@@ -450,11 +460,17 @@ input[type=button] {
     justify-content: space-between;
     height: 95px;
   }
+  header figure {
+    width: 32%;
+  }
   .header-divider {
     display: none;
   }
   header nav {
     width: 20%;
+  }
+  .hero-area {
+    min-height: 600px;
   }
   aside .content-wrapper {
     display: flex;
@@ -483,6 +499,10 @@ input[type=button] {
   .reviews article div {
     width: 45%;
   }
+  .reviews figure {
+    width: 45%;
+  }
+
   footer .content-wrapper {
     width: 70%;
     margin: 100px 0;
@@ -545,6 +565,9 @@ input[type=button] {
     font-size: 1.8rem;
     line-height: 2.4rem;
   }
+  header figure {
+    width: 26%;
+  }
   .hero-area h1 {
     width: 680px;
   }
@@ -574,10 +597,8 @@ input[type=button] {
     flex-flow: row wrap
   }
    */
-
-
-
 }
+
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
