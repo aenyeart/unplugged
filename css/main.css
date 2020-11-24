@@ -101,7 +101,8 @@ Tags to revisit: PLACEHOLDER, REVISIT, DBLCHECK, solution,
  /* General Styles */
 
  html {
-   font-size: 62.5%; /* Sets root font size to 10px */
+      color: #e2e3ed;
+      font-size: 62.5%; /* Sets root font size to 10px */
    line-height: 1.2;
  }
 
@@ -156,13 +157,7 @@ Tags to revisit: PLACEHOLDER, REVISIT, DBLCHECK, solution,
    font-style: normal;
  }
 
- .content-wrapper {
 
- }
-
- html {
-   color: #e2e3ed; /* PLACEHOLDER */
- }
 /* Base HEADER and FOOTER Styles */
 .content-wrapper {
   width: 90%;
