@@ -533,8 +533,8 @@ input[type=button] {
   .mission-content p {
     width: 47%;
   }
-  .map {
-
+  .map figure {
+    padding-bottom: 45.6%;
   }
   .contact-section .content-wrapper {
     display: flex;
@@ -613,6 +613,9 @@ input[type=button] {
     flex-flow: row wrap
   }
    */
+   .map figure {
+     padding-bottom: 37.5%;
+   }
 }
 
 @media print,
