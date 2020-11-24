@@ -243,7 +243,8 @@ footer .content-wrapper {
   text-align: center;
   width: 100%;
 }
-/* HOMEPAGE  */
+
+/******* HOMEPAGE *******/
 
 .hero-area {
   display: flex;
@@ -292,6 +293,7 @@ input[type=button] {
   width: 90%;
 }
 
+/******* FEATURES SECTION *******/
 .features {
   display: flex;
   justify-content: center;
@@ -316,6 +318,7 @@ input[type=button] {
   text-align: center;
   margin: 25px 0;
 }
+/******** REVIEWS ********/
 .reviews {
   display: flex;
   justify-content: center;
@@ -323,7 +326,7 @@ input[type=button] {
   background: #2a423a;
 }
 
-/* ABOUT PAGE */
+/******** ABOUT PAGE ********/
 
 .mission, .map, .contact-section {
   display: flex;
@@ -336,6 +339,21 @@ input[type=button] {
 .map {
   background: #dbc59a;
 }
+.map figure {
+  height: 0;
+  width: 100%;
+  padding-bottom: 125%;
+  position: relative;
+  overflow: hidden;
+}
+.map iframe {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .contact-section {
   background: #2a423a;
 }
@@ -514,6 +532,9 @@ input[type=button] {
   }
   .mission-content p {
     width: 47%;
+  }
+  .map {
+
   }
   .contact-section .content-wrapper {
     display: flex;
