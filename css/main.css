@@ -318,6 +318,10 @@ input[type=button] {
   text-align: center;
   margin: 25px 0;
 }
+.features i {
+  font-size: 6rem;
+  margin-bottom: 40px;
+}
 /******** REVIEWS ********/
 .reviews {
   display: flex;
@@ -504,6 +508,10 @@ input[type=button] {
   }
   .features-item-description {
     width: 50%;
+  }
+  .features i {
+    font-size: 7.2rem;
+    margin-bottom: 30px;
   }
   .reviews article {
     display: flex;
