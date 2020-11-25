@@ -236,8 +236,17 @@ footer .content-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #527158; /* PLACEHOLDER */
   width: 200px;
+}
+.social p {
+  font-size: 1.8rem;
+  background: #527158;
+  line-height: 1.8rem;
+  padding: 1.1rem;
+  border-radius: 4rem;
+}
+.social i {
+  min-width: 1.8rem;
 }
 .copyright {
   text-align: center;
