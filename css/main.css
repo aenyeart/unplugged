@@ -94,8 +94,11 @@ hero brown 5a4e3d
 features dk brown 282118
 review dk green 2a423a
 
-NOTES
+NOTES:
 Tags to revisit: PLACEHOLDER, REVISIT, DBLCHECK, solution,
+
+KNOWN ISSUES:
+.social-icons width of 200px prevents wrapping of icons when screen is extremely narrow. {row wrap} doesn't work here yet.
  */
 
  /* General Styles */
@@ -143,6 +146,7 @@ Tags to revisit: PLACEHOLDER, REVISIT, DBLCHECK, solution,
    font-size: 1.4rem;
    line-height: 1.8rem;
    /* font-weight: normal; */
+   margin: 0; /*Add margins back as needed.*/
  }
 
  img {
@@ -161,7 +165,9 @@ Tags to revisit: PLACEHOLDER, REVISIT, DBLCHECK, solution,
 /* Base HEADER and FOOTER Styles */
 .content-wrapper {
   width: 90%;
-  margin: 40px 0; /* solution says 50px, but all <h > and <p> default margins add ~16px, and reducing this is simpler for now. Stripping h and p of margins means having to add them back in. */
+  margin: 40px 0; 
+  max-width: 514px;
+  /* Keeps page from getting ugly before it hits breakpoint for tablet media query */
 }
 header, footer {
   display: flex;
@@ -176,17 +182,18 @@ header .content-wrapper {
   align-items: center;
   flex-flow: row wrap;
   width: 100%;
-  height: 120px;
   margin: 0;
 }
 header figure {
   width: 60%;
+  margin: 1rem 0 1rem 0;
+  max-width: 300px;
   /* flex properties seem unnecessary as <img> is only child and takes up 100% width of <figure>
   display: flex;
   justify-content: center;
-  align-items: center; */
-  /* flex-flow: row wrap;
-  in SOLUTION but seems unnecessary as <figure> only has one item  */
+  align-items: center;
+  flex-flow: row wrap;
+  /* in SOLUTION but seems unnecessary as <figure> only has one item  */
 }
 header a {
   /* DBLCHECK causes asymmetry of logo
@@ -213,7 +220,10 @@ header nav ul {
 }
 footer .content-wrapper {
   width: 55%;
-  margin: 30px 0;
+  margin: 0;
+}
+footer h4 {
+  margin-bottom: 18px;
 }
 .footer-content {
   display: flex;
@@ -224,13 +234,13 @@ footer .content-wrapper {
 .contact, .social {
   text-align: center;
   width: 200px;
+  margin-top: 45px;
 }
-/* code below seems unnecessary. Text align takes care of <h4>*/
-
 .social {
   display: flex;
   align-items: center;
   flex-flow: column wrap;
+  margin-bottom: 45px
 }
 .social-icons {
   display: flex;
@@ -251,6 +261,7 @@ footer .content-wrapper {
 .copyright {
   text-align: center;
   width: 100%;
+  padding-bottom: 10px;
 }
 
 /******* HOMEPAGE *******/
@@ -269,26 +280,28 @@ aside {
   background: #527158;
 }
 aside .content-wrapper {
-  margin-top: 30px;
+  margin: 24px 0 50px 0;
 }
 /* FORM STYLING */
 aside .form {
   margin-top: 30px;
   /* REVISIT (gets reset to 0 for tablet and desktop) */
 }
-
+.form-description h3 {
+  margin-bottom: 7px;
+}
 input[type=text] {
   box-sizing: border-box;
   width: 100%;
-  color: #2a423a;
+  color: #9d9ea4;
   font-style: italic;
-  padding: 1em;
+  padding: 16px;
+  margin: 18px 0;
 }
 
 input[type=button] {
   width: 100%;
-  padding: 20px 0;
-  margin-top: 20px;
+  padding: 15px 0;
   background-color: #2a423a;
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -298,8 +311,9 @@ input[type=button] {
   text-align: center;
   text-transform: uppercase;
 }
-.form input{
+.form input {
   width: 90%;
+  max-height: 50px;
 }
 
 /******* FEATURES SECTION *******/
@@ -311,12 +325,13 @@ input[type=button] {
   background-size: cover;;
 }
 .features .content-wrapper {
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 .features-items {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  margin-top: 25px;
 }
 .fontawesome-icon, .features-item-description {
   margin: 0 auto;
@@ -326,6 +341,9 @@ input[type=button] {
   width: 63%;
   text-align: center;
   margin: 25px 0;
+}
+.features-item-description {
+  max-width: 245px;
 }
 .features i {
   font-size: 6rem;
@@ -338,7 +356,12 @@ input[type=button] {
   align-items: center;
   background: #2a423a;
 }
-
+.reviews .content-wrapper {
+  margin: 45px 0;
+}
+.reviews figure, .reviews h3, .reviews p {
+  margin-top: 20px;
+}
 /******** ABOUT PAGE ********/
 
 .mission, .map, .contact-section {
