@@ -324,6 +324,7 @@ input[type=button] {
   background-size: cover;;
 }
 .features .content-wrapper {
+  /* DBLCHECK redundant? */
   margin-bottom: 40px;
 }
 .features-items {
@@ -371,6 +372,9 @@ input[type=button] {
 .mission {
   background: #527158;
 }
+.mission p {
+  margin-top: 18px;
+}
 .map {
   background: #dbc59a;
 }
@@ -392,7 +396,12 @@ input[type=button] {
 .contact-section {
   background: #2a423a;
 }
-
+  .contact-section .content-wrapper {
+    margin: 50px 0;
+  }
+    .contact-content h3 {
+      margin: 20px 0 16px 0;
+    }
 /* FAQ PAGE */
 
 .faq {
@@ -401,7 +410,12 @@ input[type=button] {
   align-items: center;
   background: #527158;
 }
-
+ .faq .content-wrapper {
+   margin: 50px 0;
+ }
+  .faq-content h4 {
+    margin: 45px 0 12px 0
+  }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -554,9 +568,10 @@ input[type=button] {
   }
   .features i {
     font-size: 7.2rem;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
   .reviews .content-wrapper {
+    /* DBLCHECK redundant? */
     margin: 100px 0;
   }
   .reviews h2 {
@@ -569,11 +584,12 @@ input[type=button] {
   .reviews figure, .reviews article div {
     width: 49%;
   }
-  .reviews div, .reviews p {
+  .reviews article div, .reviews p {
     margin-top: 16px;
   }
   footer .content-wrapper {
     width: 70%;
+    /* DBLCHECK redundant? */
     margin: 100px 0;
   }
   footer h4 {
@@ -592,6 +608,7 @@ input[type=button] {
     justify-content: space-between;
   }
   .mission-content p {
+    margin-top: 30px;
     width: 47%;
   }
   .map figure {
@@ -601,12 +618,16 @@ input[type=button] {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    margin: 100px 0;
   }
   .contact-section h2 {
-    width: 100%;
+    width: 90%;
   }
   .contact-content {
-    width: auto;
+    width: 50%;
+  }
+  .contact-content h3 {
+    margin: 50px 0 20px 0;
   }
 
   /* FAQ TABLET */
@@ -615,18 +636,31 @@ input[type=button] {
     justify-content: space-between;
     flex-flow: row wrap;
   }
-  .faq h2 {
-    width: 100%;
-  }
-  .faq-content {
-    width: 47%;
-  }
+    .faq h2 {
+      width: 100%;
+    }
+    .faq-content {
+      width: 47%;
+    }
+      .faq-content h4 {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        margin: 35px 0 15px 0;
+      }
+
 }
 
 @media only screen and (min-width: 1200px) {
   /* DESKTOP STYLES GO HERE */
   .content-wrapper {
     max-width: 960px;
+  }
+  header figure {
+    width: 30%;
+  }
+  header nav {
+    font-size: 1.8rem;
+    width: 15%
   }
   h1 {
     font-size: 6rem;
@@ -642,11 +676,12 @@ input[type=button] {
     font-size: 1.8rem;
     line-height: 2.4rem;
   }
-  header figure {
-    width: 26%;
+  .hero-area .content-wrapper {
+    margin: 45px 0;
   }
   .hero-area h1 {
     width: 680px;
+    line-height: 1.2;
   }
   aside .content-wrapper {
     max-width: 800px;
@@ -654,17 +689,37 @@ input[type=button] {
   .form-description, .form {
     width: 40%;
   }
+  .form-description h3 {
+    margin: 0;
+  }
+  input [type=text] {
+    font-size: 1.4rem;
+  }
   input[type=button] {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
   }
   footer .content-wrapper {
     width: 70%;
   }
+  footer h4 {
+    margin-bottom: 30px;
+  }
+  .features .content-wrapper {
+    margin-bottom: 65px
+  }
+  .features-items {
+    margin-top: 65px;
+  }
   .features-items article {
     width: 33%;
+    margin: 25px 0;
   }
   .features-item-description {
-    width: 50%;
+    width: 61%;
+  }
+  .reviews figure, .reviews article div {
+    width: 48%;
+    margin-top: 100px;
   }
   /* This was styled for desktop:
     aside .content-wrapper {
@@ -674,9 +729,34 @@ input[type=button] {
     flex-flow: row wrap
   }
    */
+/* ABOUT DESKTOP */
    .map figure {
      padding-bottom: 37.5%;
    }
+   .contact-section h2 {
+     font-size: 4.8rem;
+     width: 100%;
+   }
+    .contact-content h3 {
+      margin: 36px 0;
+    }
+/* FAQ DESKTOP */
+    .faq .content-wrapper {
+      margin: 90px 0 100px 0;
+    }
+      .faq h2 {
+        font-size: 4.8rem;
+      }
+      .faq-content {
+        width: 44%;
+      }
+        .faq-content h4 {
+          font-size: 1.8rem;
+          margin: 40px 0 17px 0;
+        }
+        .faq-content p {
+          line-height: 1em;
+        }
 }
 
 @media print,
