@@ -86,7 +86,10 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/* COLORS
+
+/*
+
+COLORS STYLEGUIDE:
 white text e2e3ed
 header/footer dark grey 202322
 form/social icons/mission light forest green 527158
@@ -98,76 +101,70 @@ NOTES:
 Tags to revisit: PLACEHOLDER, REVISIT, DBLCHECK, solution,
 
 KNOWN ISSUES:
-.social-icons width of 200px prevents wrapping of icons when screen is extremely narrow. {row wrap} doesn't work here yet.
- */
+1) .social-icons width of 200px prevents wrapping of icons when screen is extremely narrow. {row wrap} doesn't work here yet.
+2) Form is not functional.
+3)
 
- /* General Styles */
+*/
 
- html {
-      color: #e2e3ed;
-      font-size: 62.5%; /* Sets root font size to 10px */
-   line-height: 1.2;
- }
 
- body {
-   font-family: 'Open Sans', sans-serif;
-   font-size: 1.6rem; /* 16px */
- }
+/******* GENERAL STYLES *******/
+/***********************************/
 
- ul, ol {
-
+html {
+  color: #e2e3ed;
+  font-size: 62.5%; /* Sets root font size to 10px */
+  line-height: 1.2;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem; /* 16px */
  }
  nav {
-   font-size: 1.8rem;
-   font-weight: bold;
-   text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
  }
  a {
-   color: #e2e3ed;
-   text-decoration: none;
+  color: #e2e3ed;
+  text-decoration: none;
  }
-
  h1, h2, h3, h4 {
-   font-family: 'Poppins', sans-serif;
-   margin: 0; /* DBLCHECK */
-   font-weight: normal;
+  font-family: 'Poppins', sans-serif;
+  margin: 0; /* I set baseline margins to zero and added custom margins back in according to the design. Same for <p> tags. */
+  font-weight: normal;
  }
  h1 {
-   font-size: 3.6rem;
+  font-size: 3.6rem;
  }
  h2 {
-   font-size: 3rem;
+  font-size: 3rem;
  }
  h3, h4 {
-   font-size: 1.8rem;
+  font-size: 1.8rem;
  }
-
  p {
-   font-size: 1.4rem;
-   line-height: 1.8rem;
-   /* font-weight: normal; */
-   margin: 0; /*Add margins back as needed.*/
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin: 0; /*Add margins back as needed.*/
  }
-
  img {
-   width: 100%;
+  width: 100%;
  }
-
  figure {
-   margin: 0;
+  margin: 0;
  }
-
  address {
-   font-style: normal;
+  font-style: normal;
  }
 
+/******* Base HEADER and FOOTER Styles *******/
+/******************************************/
 
-/* Base HEADER and FOOTER Styles */
 .content-wrapper {
   width: 90%;
   margin: 40px 0;
-  max-width: 514px;
-  /* Keeps page from getting ugly before it hits breakpoint for tablet media query */
+  max-width: 514px; /* Keeps page from getting ugly before it hits breakpoint for tablet media query */
 }
 header, footer {
   display: flex;
@@ -176,96 +173,89 @@ header, footer {
   flex-flow: row wrap;
   background: #202322;
 }
-header .content-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  width: 100%;
-  margin: 0;
-}
-header figure {
-  width: 60%;
-  margin: 1rem 0 1rem 0;
-  max-width: 300px;
-  /* flex properties seem unnecessary as <img> is only child and takes up 100% width of <figure>
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  /* in SOLUTION but seems unnecessary as <figure> only has one item  */
-}
-header a {
-  /* DBLCHECK causes asymmetry of logo
-  padding: 15px 0 10px 0;*/
-}
-.header-divider {
-  width: 100%;
-  height: 1px;
-  background: #3a3a3a;
-}
-header nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 45%;
-  /* flex-flow: row wrap; seems unnecessary as nav only has one block item (ul) within it. */
-}
-header nav ul {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  list-style: none;
-  width: 100%;
-}
-footer .content-wrapper {
-  width: 55%;
-  margin: 0;
-}
-footer h4 {
-  margin-bottom: 18px;
-}
-.footer-content {
-  display: flex;
-  justify-content: center;
-  align-content: space-around;
-  flex-flow: row wrap;
-}
-.contact, .social {
-  text-align: center;
-  width: 200px;
-  margin-top: 45px;
-}
-.social {
-  display: flex;
-  align-items: center;
-  flex-flow: column wrap;
-  margin-bottom: 45px
-}
-.social-icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 200px;
-}
-.social p {
-  font-size: 1.8rem;
-  background: #527158;
-  line-height: 1.8rem;
-  padding: 1.1rem;
-  border-radius: 2rem;
-}
-.social i {
-  min-width: 1.8rem;
-}
-.copyright {
-  text-align: center;
-  width: 100%;
-  padding-bottom: 10px;
-}
+  header .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: 0;
+  }
+    header figure {
+      width: 60%;
+      margin: 1rem 0 1rem 0;
+      max-width: 300px;
+      /* Flex properties (used in solution code) seem unnecessary here as <img> is only child and takes up 100% width of <figure>. */
+    }
+    .header-divider {
+      width: 100%;
+      height: 1px;
+      background: #3a3a3a;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 45%;
+      /* flex-flow: row wrap; seems unnecessary as nav only has one block item (ul) within it. */
+    }
+      nav ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        list-style: none;
+        width: 100%;
+      }
+  footer .content-wrapper {
+    width: 55%;
+    margin: 0;
+  }
+    footer h4 {
+      margin-bottom: 18px;
+    }
+    .footer-content {
+      display: flex;
+      justify-content: center;
+      align-content: space-around;
+      flex-flow: row wrap;
+    }
+      .contact, .social {
+        text-align: center;
+        width: 200px;
+        margin-top: 45px;
+      }
+        .social {
+          display: flex;
+          align-items: center;
+          flex-flow: column wrap;
+          margin-bottom: 45px
+        }
+          .social-icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 200px;
+          }
+            .social p {
+              font-size: 1.8rem;
+              background: #527158;
+              line-height: 1.8rem;
+              padding: 1.1rem;
+              border-radius: 2rem;
+            }
+              .social i {
+                min-width: 1.8rem;
+              }
+    .copyright {
+      text-align: center;
+      width: 100%;
+      padding-bottom: 10px;
+    }
 
-/******* HOMEPAGE *******/
+/******* MOBILE HOMEPAGE *******/
+/***********************************/
 
+/* HERO SECTION */
 .hero-area {
   display: flex;
   justify-content: center;
@@ -273,126 +263,131 @@ footer h4 {
   background-size: cover;
   min-height: 500px;
 }
+/* FORM SECTION */
 aside {
   display: flex;
   justify-content: center;
   align-items: center;
   background: #527158;
 }
-aside .content-wrapper {
-  margin: 24px 0 50px 0;
-}
-/* FORM STYLING */
-aside .form {
-  margin-top: 30px;
-  /* REVISIT (gets reset to 0 for tablet and desktop) */
-}
-.form-description h3 {
-  margin-bottom: 7px;
-}
-input[type=text] {
-  box-sizing: border-box;
-  width: 100%;
-  color: #9d9ea4;
-  font-style: italic;
-  padding: 16px;
-  margin: 18px 0;
-}
+  aside .content-wrapper {
+    margin: 24px 0 50px 0;
+  }
+    /* FORM STYLING */
+    .form-description h3 {
+      margin-bottom: 7px;
+    }
+    .form {
+      margin-top: 30px;
+      /* Gets reset to 0 for tablet and desktop. */
+    }
+      input[type=text] {
+        box-sizing: border-box;
+        width: 100%;
+        color: #9d9ea4;
+        font-style: italic;
+        padding: 16px;
+        margin: 18px 0;
+      }
+      input[type=button] {
+        width: 100%;
+        padding: 15px 0;
+        background-color: #2a423a;
+        font-family: 'Poppins', Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 1.8rem;
+        color: #e2e3ed;
+        border: none;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .form input {
+        max-height: 50px;
+      }
 
-input[type=button] {
-  width: 100%;
-  padding: 15px 0;
-  background-color: #2a423a;
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 1.8rem;
-  color: #e2e3ed;
-  border: none;
-  text-align: center;
-  text-transform: uppercase;
-}
-.form input {
-  max-height: 50px;
-}
-
-/******* FEATURES SECTION *******/
+/* FEATURES SECTION */
 .features {
   display: flex;
   justify-content: center;
   align-items: center;
   background: url('../img/campsite.jpg') center no-repeat #282118;
-  background-size: cover;;
+  background-size: cover;
 }
-.features .content-wrapper {
-  /* DBLCHECK redundant? */
-  margin-bottom: 40px;
-}
-.features-items {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin-top: 25px;
-}
-.fontawesome-icon, .features-item-description {
-  margin: 0 auto;
-  /* try this. might need to make <article> into flex container instead */
-}
-.features-items article {
-  width: 63%;
-  text-align: center;
-  margin: 25px 0;
-}
-.features-item-description {
-  max-width: 245px;
-}
-.features i {
-  font-size: 6rem;
-  margin-bottom: 40px;
-}
-/******** REVIEWS ********/
+  .features-items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 25px;
+  }
+    .features-items article {
+      width: 63%;
+      text-align: center;
+      margin: 25px 0;
+    }
+      .fontawesome-icon, .features-item-description {
+        margin: 0 auto;
+        /* try this. might need to make <article> into flex container instead */
+      }
+        .features i {
+          font-size: 6rem;
+          margin-bottom: 40px;
+        }
+      .features-item-description {
+        max-width: 245px;
+      }
+
+/* REVIEWS SECTION */
 .reviews {
   display: flex;
   justify-content: center;
   align-items: center;
   background: #2a423a;
 }
-.reviews .content-wrapper {
-  margin: 45px 0;
-}
-.reviews figure, .reviews div, .reviews p {
-  margin-top: 20px;
-}
-/******** ABOUT PAGE ********/
+  .reviews .content-wrapper {
+    margin: 45px 0;
+  }
+    .reviews figure, .reviews div, .reviews p {
+      margin-top: 20px;
+    }
+
+
+/******* MOBILE ABOUT PAGE *******/
+/***********************************/
 
 .mission, .map, .contact-section {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+/* MISSION SECTION */
 .mission {
   background: #527158;
 }
-.mission p {
-  margin-top: 18px;
-}
+  .mission p {
+    margin-top: 18px;
+  }
+
+/* MAP SECTION */
 .map {
   background: #dbc59a;
 }
-.map figure {
-  height: 0;
-  width: 100%;
-  padding-bottom: 125%;
-  position: relative;
-  overflow: hidden;
-}
-.map iframe {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+  .map figure {
+    height: 0;
+    width: 100%;
+    padding-bottom: 125%;
+    position: relative;
+    overflow: hidden;
+  }
+    .map iframe {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
 
+/* CONTACT SECTION */
 .contact-section {
   background: #2a423a;
 }
@@ -402,7 +397,10 @@ input[type=button] {
     .contact-content h3 {
       margin: 20px 0 16px 0;
     }
-/* FAQ PAGE */
+
+
+/******* MOBILE FAQ PAGE *******/
+/***********************************/
 
 .faq {
   display: flex;
@@ -410,13 +408,17 @@ input[type=button] {
   align-items: center;
   background: #527158;
 }
- .faq .content-wrapper {
-   margin: 50px 0;
- }
-  .faq-content h4 {
-    margin: 45px 0 12px 0
+  .faq .content-wrapper {
+    margin: 50px 0;
   }
-/* ==========================================================================
+    .faq-content h4 {
+      margin: 45px 0 12px 0
+    }
+
+/* END MOBILE STYLES */
+
+/*
+ ==========================================================================
    Helper classes
    ========================================================================== */
 
@@ -503,7 +505,10 @@ input[type=button] {
    ========================================================================== */
 
 @media only screen and (min-width: 768px) {
-  /* TABLET STYLES GO HERE */
+
+/******* TABLET STYLES *******/
+/***********************************/
+
   .content-wrapper {
     max-width: 640px;
     margin: 100px 0;
@@ -519,118 +524,140 @@ input[type=button] {
     font-size: 2.4rem;
     line-height: 3rem;
   }
+
+  /* HEADER AND FOOTER (TABLET) */
   header .content-wrapper {
     justify-content: space-between;
     height: 95px;
   }
-  header figure {
-    width: 35%;
+    header figure {
+      width: 35%;
+    }
+    .header-divider {
+      display: none;
+    }
+    nav {
+      width: 20%;
+      font-size: 1.6rem;
+    }
+  footer .content-wrapper {
+    width: 70%;
+    margin: 100px 0; /* Necessary due to margin:0 in mobile design */
   }
-  .header-divider {
-    display: none;
-  }
-  header nav {
-    width: 20%;
-  }
-  nav {
-    font-size: 1.6rem;
-  }
+    .footer-content {
+      justify-content: space-between;
+    }
+      .contact, .social {
+        margin: 0; /* Removes margins that were on these divs in the MOBILE design, but not TABLET design. */
+      }
+        footer h4 {
+          margin-bottom: 40px;
+        }
+
+
+  /******* TABLET HOMEPAGE *******/
+  /***********************************/
+
+  /* HERO SECTION (TABLET) */
   .hero-area {
     min-height: 600px;
   }
+
+  /* FORM SECTION (TABLET) */
   aside .content-wrapper {
     display: flex;
     justify-content: space-between;
     margin: 45px 0;
   }
-  aside .form {
-    margin-top: 0;
-  }
   .form-description, .form {
     width: 45%;
   }
-  .form-description p {
-    margin: 18px 0;
+    .form-description p {
+      margin: 18px 0;
+    }
+  .form {
+    margin-top: 0;
   }
+
+  /* FEATURES SECTION (TABLET) */
   .features .content-wrapper {
     margin-bottom: 80px;
   }
-  .features-items {
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-  .features-items article {
-    width: 50%;
-    margin: 20px 0;
-  }
-  .features-item-description {
-    width: 50%;
-  }
-  .features i {
-    font-size: 7.2rem;
-    margin-bottom: 25px;
-  }
+    .features-items {
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+      .features-items article {
+        width: 50%;
+        margin: 20px 0;
+      }
+        .features i {
+          font-size: 7.2rem;
+          margin-bottom: 25px;
+        }
+        .features-item-description {
+          width: 50%;
+        }
+
+  /* REVIEWS SECTION (TABLET) */
   .reviews .content-wrapper {
-    /* DBLCHECK redundant? */
-    margin: 100px 0;
+    margin: 100px 0; /* Necessary due to margin:0 in mobile design */
   }
-  .reviews h2 {
-    width: 80%;
-  }
-  .reviews article {
-    display: flex;
-    justify-content: space-between;
-  }
-  .reviews figure, .reviews article div {
-    width: 49%;
-  }
-  .reviews article div, .reviews p {
-    margin-top: 16px;
-  }
-  footer .content-wrapper {
-    width: 70%;
-    /* DBLCHECK redundant? */
-    margin: 100px 0;
-  }
-  footer h4 {
-    margin-bottom: 40px;
-  }
-  .footer-content {
-    justify-content: space-between;
-  }
-  .contact, .social {
-    margin: 0;
-  }
-  /* ABOUT - TABLET */
+    .reviews h2 {
+      width: 80%;
+    }
+    .reviews article {
+      display: flex;
+      justify-content: space-between;
+    }
+      .reviews figure, .reviews article div {
+        width: 49%;
+      }
+      .reviews article div, .reviews p {
+        margin-top: 16px;
+      }
+
+
+  /******* TABLET ABOUT PAGE *******/
+  /***********************************/
+
+  /* MISSION SECTION (TABLET) */
   .mission-content {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
-  .mission-content p {
-    margin-top: 30px;
-    width: 47%;
-  }
+    .mission-content p {
+      margin-top: 30px;
+      width: 47%;
+    }
+
+  /* MAP SECTION (TABLET) */
   .map figure {
     padding-bottom: 45.6%;
   }
+
+  /* CONTACT SECTION (TABLET) */
   .contact-section .content-wrapper {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     margin: 100px 0;
   }
-  .contact-section h2 {
-    width: 90%;
-  }
-  .contact-content {
-    width: 50%;
-  }
-  .contact-content h3 {
-    margin: 50px 0 20px 0;
-  }
+    .contact-section h2 {
+      width: 90%;
+    }
+    .contact-content {
+      width: 50%;
+    }
+      .contact-content h3 {
+        margin: 50px 0 20px 0;
+      }
 
-  /* FAQ TABLET */
+
+  /******* TABLET FAQ PAGE *******/
+  /***********************************/
+
   .faq .content-wrapper {
     display: flex;
     justify-content: space-between;
@@ -648,19 +675,16 @@ input[type=button] {
         margin: 35px 0 15px 0;
       }
 
-}
+}  /* END TABLET STYLES */
+
 
 @media only screen and (min-width: 1200px) {
-  /* DESKTOP STYLES GO HERE */
+
+  /******* DESKTOP STYLES *******/
+  /***********************************/
+
   .content-wrapper {
     max-width: 960px;
-  }
-  header figure {
-    width: 30%;
-  }
-  header nav {
-    font-size: 1.8rem;
-    width: 15%
   }
   h1 {
     font-size: 6rem;
@@ -676,88 +700,112 @@ input[type=button] {
     font-size: 1.8rem;
     line-height: 2.4rem;
   }
-  .hero-area .content-wrapper {
-    margin: 45px 0;
+
+  /* HEADER AND FOOTER (DESKTOP) */
+  header figure {
+    width: 30%;
   }
-  .hero-area h1 {
-    width: 680px;
-    line-height: 1.2;
-  }
-  aside .content-wrapper {
-    max-width: 800px;
-  }
-  .form-description, .form {
-    width: 40%;
-  }
-  .form-description h3 {
-    margin: 0;
-  }
-  input [type=text] {
-    font-size: 1.4rem;
-  }
-  input[type=button] {
+  nav {
     font-size: 1.8rem;
+    width: 15%
   }
   footer .content-wrapper {
     width: 70%;
   }
-  footer h4 {
-    margin-bottom: 30px;
+    footer h4 {
+      margin-bottom: 30px;
+    }
+
+
+  /******* DESKTOP HOMEPAGE *******/
+  /***********************************/
+
+  /* HERO SECTION (DEKSTOP) */
+  .hero-area .content-wrapper {
+    margin: 45px 0;
   }
+    .hero-area h1 {
+      width: 680px;
+      line-height: 1.2;
+    }
+
+  /* FORM SECTION (DEKSTOP) */
+  aside .content-wrapper {
+    max-width: 800px;
+  }
+    .form-description, .form {
+      width: 40%;
+    }
+      .form-description h3 {
+        margin: 0;
+      }
+      input [type=text] {
+        font-size: 1.4rem;
+      }
+      input[type=button] {
+        font-size: 1.8rem;
+      }
+
+  /* FEATURES SECTION (DESKTOP) */
   .features .content-wrapper {
     margin-bottom: 65px
   }
-  .features-items {
-    margin-top: 65px;
-  }
-  .features-items article {
-    width: 33%;
-    margin: 25px 0;
-  }
-  .features-item-description {
-    width: 61%;
-  }
+    .features-items {
+      margin-top: 65px;
+    }
+      .features-items article {
+        width: 33%;
+        margin: 25px 0;
+      }
+        .features-item-description {
+          width: 61%;
+        }
+
+  /* REVIEWS SECTION (DESKTOP) */
   .reviews figure, .reviews article div {
     width: 48%;
     margin-top: 100px;
   }
-  /* This was styled for desktop:
-    aside .content-wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-flow: row wrap
+
+
+  /******* DESKTOP ABOUT PAGE *******/
+  /***********************************/
+
+  /* MAP SECTION (DESKTOP) */
+  .map figure {
+    padding-bottom: 37.5%;
   }
-   */
-/* ABOUT DESKTOP */
-   .map figure {
-     padding-bottom: 37.5%;
-   }
-   .contact-section h2 {
-     font-size: 4.8rem;
-     width: 100%;
-   }
+
+  /* CONTACT SECTION (DESKTOP) */
+  .contact-section h2 {
+    font-size: 4.8rem;
+    width: 100%;
+  }
     .contact-content h3 {
       margin: 36px 0;
     }
-/* FAQ DESKTOP */
-    .faq .content-wrapper {
-      margin: 90px 0 100px 0;
+
+
+  /******* DESKTOP FAQ PAGE *******/
+  /***********************************/
+
+  .faq .content-wrapper {
+    margin: 90px 0 100px 0;
+  }
+    .faq h2 {
+      font-size: 4.8rem;
     }
-      .faq h2 {
-        font-size: 4.8rem;
+    .faq-content {
+      width: 44%;
+    }
+      .faq-content h4 {
+        font-size: 1.8rem;
+        margin: 40px 0 17px 0;
       }
-      .faq-content {
-        width: 44%;
+      .faq-content p {
+        line-height: 1em;
       }
-        .faq-content h4 {
-          font-size: 1.8rem;
-          margin: 40px 0 17px 0;
-        }
-        .faq-content p {
-          line-height: 1em;
-        }
-}
+} /* END OF DESKTOP STYLES */
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
