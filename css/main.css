@@ -98,7 +98,25 @@ features dk brown 282118
 review dk green 2a423a
 
 NOTES:
-Tags to revisit: PLACEHOLDER, REVISIT, DBLCHECK, solution,
+> Tags to revisit: PLACEHOLDER, REVISIT, DBLCHECK, solution.
+> Mobile-first design, breakpoints at 768px (tablet) and 1200px (desktop).
+> One CSS file for all pages on site (Home, About, FAQ)
+> Organization is as follows and is repeated as needed after media queries:
+
+  MEDIA TYPE
+      GENERAL STYLES
+      HEADER & FOOTER
+      HOMEPAGE
+          HERO
+          ASIDE/FORM
+          FEATURES
+          REVIEWS
+      ABOUT PAGE
+          MISSION
+          MAP
+          CONTACT
+      FAQ PAGE
+          FAQ
 
 KNOWN ISSUES:
 1) .social-icons width of 200px prevents wrapping of icons when screen is extremely narrow. {row wrap} doesn't work here yet.
@@ -107,9 +125,10 @@ KNOWN ISSUES:
 
 */
 
-
-/******* GENERAL STYLES *******/
+/******* MOBILE STYLES *******/
 /***********************************/
+
+/* GENERAL STYLES */
 
 html {
   color: #e2e3ed;
@@ -158,8 +177,7 @@ body {
   font-style: normal;
  }
 
-/******* Base HEADER and FOOTER Styles *******/
-/******************************************/
+/* HEADER AND FOOTER (MOBILE) */
 
 .content-wrapper {
   width: 90%;
@@ -263,6 +281,7 @@ header, footer {
   background-size: cover;
   min-height: 500px;
 }
+
 /* FORM SECTION */
 aside {
   display: flex;
@@ -806,6 +825,8 @@ aside {
         line-height: 1em;
       }
 } /* END OF DESKTOP STYLES */
+
+/* END OF AUTHOR STYLES */
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
