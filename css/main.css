@@ -121,7 +121,7 @@ NOTES:
 KNOWN ISSUES:
 1) .social-icons width of 200px prevents wrapping of icons when screen is extremely narrow. {row wrap} doesn't work here yet.
 2) Form is not functional.
-3)
+3) Consider changing links in mobile/tablet so it doesn't open new tab.
 
 */
 
